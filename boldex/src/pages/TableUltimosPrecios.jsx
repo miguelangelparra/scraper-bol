@@ -33,7 +33,7 @@ export const TableUltimosPrecios = () => {
             <td>{simbolo.ultPrecio}</td>
             <td>{simbolo.variacion}</td>
             <td>{simbolo.negociados}</td>
-            <td>{simbolo.monto}</td>
+            <td >{simbolo.monto}</td>
             <td>{simbolo.hora}</td>
           </tr>)
         })
