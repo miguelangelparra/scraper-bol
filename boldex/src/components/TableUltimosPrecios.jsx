@@ -9,7 +9,7 @@ export const TableUltimosPrecios = () => {
   const obtenerSimbolos = async () => await axios.get("http://localhost:8080/api/obtenerSimbolos").then(res => setSimbolos(res.data))
 
   useEffect(() => {
-    obtenerSimbolos()
+    //obtenerSimbolos()
 
   }, [])
   return (<>

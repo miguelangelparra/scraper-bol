@@ -1,19 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import {NavBar} from "./components/Navbar";
+import { Container, Row, Col } from "react-bootstrap";
 
-
-
-import './App.css';
-import {TableUltimosPrecios} from './pages/TableUltimosPrecios'
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <TableUltimosPrecios></TableUltimosPrecios>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <NavBar />
+        </Col>
+      </Row>
+      <Row>
+        <Router>
+          <Route exact path="/" component={Home} />
+        </Router>
+      </Row>
+    </Container>
   );
 }
 

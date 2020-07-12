@@ -34,9 +34,13 @@ return await  axios.get("http://www.bolsadecaracas.com/esp/textos/resumenTitRV.j
         }
       })
 
-      fs.writeFile("./public/archivo/items.json", JSON.stringify(simbolos), (err) => {
+      let fecha= new Date()
+      let mes= fecha.getMonth()
+      let dia =fecha.getDate()
+
+      fs.writeFile(`./public/archivo/historico${mes}-${dia}.json`, JSON.stringify(simbolos), (err) => {
         if (err) return console.log(err)
-        console.log("items salvados ")
+        console.log("historico del dia salvados ")
 
       })
       return(simbolos)
